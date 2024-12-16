@@ -1,0 +1,86 @@
+/* Estilo general para la página */
+body {
+  --ion-background-color: #f0f8ff; /* Fondo azul claro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Centrar el ícono al inicio */
+ion-icon {
+  font-size: 64px;
+  color: #ffffff; /* Azul vibrante */
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Títulos principales */
+h1 {
+  color: #003366; /* Azul oscuro */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Contenido del formulario */
+ion-content {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: white; /* Fondo blanco para el contenido */
+}
+
+/* Input y select */
+ion-item {
+  --border-color: #007bff; /* Azul en bordes */
+  --highlight-color-focused: #0056b3; /* Azul más oscuro al enfoque */
+  --background-hover: #e3f2fd; /* Fondo azul claro al hover */
+  margin-bottom: 15px;
+}
+
+ion-input, ion-select {
+  font-size: 1rem;
+}
+
+/* Checkbox y texto */
+ion-checkbox {
+  --background: #007bff;
+  --background-checked: #0056b3;
+}
+
+ion-label a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+ion-label a:hover {
+  text-decoration: underline;
+}
+
+/* Botón de registro */
+ion-button {
+  --background: #006eff; /* Azul vibrante */
+  --background-hover: #0056b3; /* Azul más oscuro al hover */
+  --color: white; /* Texto blanco */
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+ion-button ion-icon {
+  font-size: 1.2rem;
+}
+
+/* Pequeñas animaciones */
+ion-button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}

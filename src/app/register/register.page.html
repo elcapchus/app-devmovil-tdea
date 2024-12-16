@@ -1,0 +1,85 @@
+<ion-icon name="cube-outline"></ion-icon>
+<h1>Business Account</h1>
+
+
+<ion-content [fullscreen]="true">
+
+    <ion-item>
+      <ion-input
+        [(ngModel)]="user.email"
+        name="email"
+        label="Correo Electrónico"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese su correo"
+        type="email"
+        required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        [(ngModel)]="user.companyname"
+        name="companyname"
+        label="Company Name"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese el nombre de la compania"
+        type="text"
+        required>
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Tipo de Compañía</ion-label>
+      <ion-select [(ngModel)]="user.companytype" name="companytype" fill="outline" placeholder="Selecciona el tipo de compañía">
+        <ion-select-option value="A">A</ion-select-option>
+        <ion-select-option value="B">B</ion-select-option>
+        <ion-select-option value="C">C</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+        <ion-input
+      [(ngModel)]="user.website"
+      name="website"
+      label="Sitio Web"
+      label-placement="floating"
+      fill="outline"
+      placeholder="Ingrese el sitio web de la compañía"
+      type="text"
+      required>
+    </ion-input>
+
+
+
+    <ion-item>
+      <ion-input
+        [(ngModel)]="user.password"
+        name="password"
+        label="Contraseña"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese su contraseña"
+        type="password"
+        required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox slot="start" [(ngModel)]="user.agree" name="agree"></ion-checkbox>
+      <ion-label>
+        Estoy de acuerdo con los <a href="/terms" target="_blank">términos y condiciones</a>.
+      </ion-label>
+    </ion-item>
+
+
+
+    <ion-button class="ion-padding" color="success" expand="full" (click)="register(user)">
+      <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+      Registrarse
+    </ion-button>
+
+
+</ion-content>

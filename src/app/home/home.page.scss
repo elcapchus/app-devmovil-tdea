@@ -1,0 +1,68 @@
+// Colores y fuentes
+$primary-color: #00ff00; // Verde brillante
+$dark-bg: #181818; // Fondo oscuro
+$light-bg: #1a1a1a; // Fondo ligeramente más claro
+$accent-color: #ff0066; // Color de acento para algunos elementos
+
+// Estilo global de la página
+ion-content {
+  background-color: $dark-bg;
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive; // Fuente estilo gamer
+
+  ion-toolbar {
+    background-color: $primary-color;
+    color: #ffffff;
+    border-radius: 0 0 10px 10px;
+  }
+
+  ion-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  // Botón flotante
+  ion-fab {
+    position: fixed;
+    bottom: 20px; // Posicionarlo a la parte inferior de la pantalla
+    right: 20px; // A la derecha
+    z-index: 1000; // Asegurarse de que esté encima de otros elementos
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1); // Efecto de aumento al pasar el mouse sobre el botón
+      opacity: 0.9;
+    }
+
+    ion-fab-button {
+
+      box-shadow: 0 0px 12px rgba(0, 119, 255, 0.486);
+      transition: transform 0.3s ease;
+      border-radius: 50%; // Hacer que el botón sea un círculo
+      &:hover {
+        transform: rotate(360deg); // Rotación al pasar el mouse
+      }
+
+      ion-icon {
+        font-size: 30px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// Animaciones y transiciones
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ion-list {
+  animation: slideUp 0.5s ease-out;
+}
